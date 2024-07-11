@@ -97,4 +97,65 @@ Visualizations were created to enhance understanding and communication of the an
    plt.show()
    ```
 
+**Hypothesis Testing**
+
+Hypothesis tests were conducted to validate key assumptions:
+1. Hypothesis 1: Restaurants with Online Order and Table Booking Perform Better:
+   ```python
+   t_stat, p_value = ttest_ind(
+    df[df['Both Facilities'] == 'Yes']['Aggregate rating'],
+    df[df['Both Facilities'] == 'No']['Aggregate rating'],
+    equal_var=False
+   )
+   ```
    
+2. Hypothesis 2: Restaurants with Social Activities are Rated More Positively:
+   ```python
+   t_stat_social, p_value_social = ttest_ind(
+    df[df['Has Table booking'] == 'Yes']['Aggregate rating'],
+    df[df['Has Table booking'] == 'No']['Aggregate rating'],
+    equal_var=False
+   )
+   ```
+
+### Results/Findings
+
+- **Higher Ratings with Facilities**: Restaurants offering both online order and table booking facilities tend to receive higher average ratings compared to those without these features.
+
+- **Expensive and Affordable Cuisines**: Fine dining and specialty cuisines are more expensive on average, while fast-food and common cuisines are cheaper.
+
+- **Customer Engagement**: Locations with a higher number of restaurants receive more votes, indicating higher customer engagement. However, the number of votes per restaurant can vary widely.
+
+- **Preferred Cuisines**: Certain cuisines consistently receive high ratings, highlighting customer preferences for these types of food.
+
+- **Positive Impact of Social Activities**: Restaurants that offer table booking facilities, which can be associated with social dining experiences, tend to have higher ratings.
+
+- **Cost Variation by Location**: The average dining cost varies significantly by location and type of cuisine, reflecting regional differences in pricing and dining culture.
+
+- **Correlation between Facilities and Ratings**: A positive correlation exists between the availability of customer convenience facilities (online order and table booking) and higher restaurant ratings.
+
+### Recommendations
+
+1. **Enhance Customer Convenience**: Restaurants should consider offering online ordering and table booking facilities to improve customer satisfaction and ratings.
+
+2. **Focus on High-Rating Cuisines**: Restaurants could focus on offering cuisines that are highly rated by customers to attract more business and improve their reputation.
+
+3. **Target High Engagement Locations**: For expansion, Zomato and restaurant owners should consider locations with high customer engagement, as indicated by the number of votes and ratings.
+
+4. **Optimize Pricing Strategies**: Restaurants should optimize their pricing strategies based on the type of cuisine and the location to attract more customers and increase profitability.
+
+5. **Promote Social Dining Experiences**: Enhancing social dining experiences by offering table bookings and other social activities can lead to higher customer satisfaction and ratings.
+
+### Limitations
+
+1. **Data Representation**: The dataset may not represent all geographical regions equally, leading to potential biases in the analysis.
+
+2. **Feature Limitations**: Some important features influencing customer ratings, such as service quality, ambiance, and hygiene, are not included in the dataset.
+
+3. **Proxy Assumptions**: Assumptions made about proxies for social activities (e.g., table booking) may not fully capture the complexity of customer dining preferences.
+
+### References
+
+1. *Seaborn and Matplotlib Documentation*: For data visualization methods.
+2. *Zomato API Documentation*: For detailed information on the data fields and how the data was obtained.
+3. *ChatGPT - Python* [Check here](chat.openai.com)
