@@ -109,7 +109,7 @@ Hypothesis tests were conducted to validate key assumptions:
    )
    ```
 
-
+   ![Boxplot](https://github.com/lesl-i-e/Zomato_Analysis/blob/main/Visualization%201.PNG)
    
 2. Hypothesis 2: Restaurants with Social Activities are Rated More Positively:
    ```python
@@ -120,6 +120,8 @@ Hypothesis tests were conducted to validate key assumptions:
    )
    ```
 
+   ![Boxplot](https://github.com/lesl-i-e/Zomato_Analysis/blob/main/Visualization%201.PNG)
+   
 ### Results/Findings
 
 - **Higher Ratings with Facilities**: Restaurants offering both online order and table booking facilities tend to receive higher average ratings compared to those without these features.
