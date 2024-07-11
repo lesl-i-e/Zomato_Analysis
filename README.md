@@ -2,6 +2,32 @@
 
 Practice Analysis on Zomato Dataset, which entails data from hotels and the services they offer from all over the world.
 
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Data Sources](#data-sources)
+3. [Tools](#tools)
+4. [Data Cleaning and Preparation](#data-cleaning-and-preparation)
+    1. [Handling Missing Values](#handling-missing-values)
+    2. [Removing Duplicates](#removing-duplicates)
+    3. [Data Type Conversion](#data-type-conversion)
+5. [Exploratory Data Analysis](#exploratory-data-analysis)
+    1. [Average Ratings](#average-ratings)
+    2. [Restaurant Categories and Costs](#restaurant-categories-and-costs)
+    3. [Location and Votes](#location-and-votes)
+    4. [High Rating Cuisines](#high-rating-cuisines)
+    5. [Impact of Social Activities](#impact-of-social-activities)
+6. [Visualizations](#visualizations)
+    1. [Box Plot](#box-plot)
+    2. [Bar Plot](#bar-plot)
+7. [Hypothesis Testing](#hypothesis-testing)
+    1. [Hypothesis 1: Restaurants with Online Order and Table Booking Perform Better](#hypothesis-1-restaurants-with-online-order-and-table-booking-perform-better)
+    2. [Hypothesis 2: Restaurants with Social Activities are Rated More Positively](#hypothesis-2-restaurants-with-social-activities-are-rated-more-positively)
+8. [Results/Findings](#resultsfindings)
+9. [Recommendations](#recommendations)
+10. [Limitations](#limitations)
+11. [References](#references)
+
 ### Project Overview
 
 The Zomato Data Analysis project aims to provide actionable insights for restaurant owners, food enthusiasts, and potential business partners by analyzing a comprehensive dataset obtained from Zomato. The analysis addresses various aspects of restaurant performance, customer preferences, and strategic business decisions. Key objectives include identifying high-performing restaurant categories, understanding customer engagement, and exploring cost factors across different locations and cuisines.
@@ -160,6 +186,6 @@ Hypothesis tests were conducted to validate key assumptions:
 
 ### References
 
-1. *Seaborn and Matplotlib Documentation*: For data visualization methods.
+1. *Seaborn and Matplotlib Documentation*: For data visualization methods.[Check here](https://seaborn.pydata.org/)
 2. *Zomato API Documentation*: For detailed information on the data fields and how the data was obtained.
 3. *ChatGPT - Python* [Check here](chat.openai.com)
