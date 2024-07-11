@@ -40,5 +40,61 @@ Data cleaning and preparation were critical steps to ensure the accuracy and rel
    df['Average Cost for two'] = df['Average Cost for two'].astype(int)
    ```
 
-   ### Exploratory Data Analysis
+### Exploratory Data Analysis
+   
+Exploratory Data Analysis (EDA) was conducted to uncover patterns, trends, and relationships within the data. Key findings included:
+1. Average Ratings
+   - Restaurants with table booking and online delivery facilities had higher average ratings compared to those without these facilities.
+   ```python
+   avg_rating_with_table_booking = df[df['Has Table booking'] == 'Yes']['Aggregate rating'].mean()
+   avg_rating_with_online_delivery = df[df['Has Online delivery'] == 'Yes']['Aggregate rating'].mean()
+   ```
+2. Restaurant Categories and Costs
+   - Identified cuisines that were more expensive or cheaper on average.
+   ```python
+   average_cost_by_category = df.groupby('Cuisines')['Average Cost for two'].mean().reset_index()
+   ```
+3. Location and Votes
+   - Analyzed the distribution of votes across different locations and their correlation with the number of restaurants.
+     ```python
+     total_votes = df.groupby('City')['Votes'].sum().reset_index()
+     num_restaurants = df.groupby('City')['Restaurant ID'].nunique().reset_index()
+     votes_and_restaurants = pd.merge(total_votes, num_restaurants, on='City')
+     votes_and_restaurants['Votes per Restaurant'] = votes_and_restaurants['Total Votes'] / votes_and_restaurants['Number of Restaurants']
+     ```
+4. High Rating Cuisines
+   - Identified cuisines that received the most positive ratings.
+     ```python
+     average_rating_by_cuisine = df.groupby('Cuisines')['Aggregate rating'].mean().reset_index()
+     ```
+5. Impact of Social Activities
+   - Assessed the impact of social activities (using table booking as a proxy) on restaurant ratings.
+     ```python
+     avg_rating_with_social = df[df['Has Table booking'] == 'Yes']['Aggregate rating'].mean()
+     avg_rating_without_social = df[df['Has Table booking'] == 'No']['Aggregate rating'].mean()
+     ```
+
+**Visualizations**
+
+Visualizations were created to enhance understanding and communication of the analysis:
+1. Box plot
+   ```python
+   plt.figure(figsize=(10, 6))
+   sns.boxplot(x='Has Table booking', y='Aggregate rating', data=df)
+   plt.title('Distribution of Ratings for Restaurants with and without Social Activities')
+   plt.xlabel('Has Table Booking Facility')
+   plt.ylabel('Aggregate Rating')
+   plt.show()
+   ```
+2. Box Plot
+   ```python
+   plt.figure(figsize=(10, 6))
+   sns.barplot(x='Both Facilities', y='Aggregate rating', hue='Both Facilities', palette='rocket', data=average_ratings, dodge=False)
+   plt.title('Average Ratings for Restaurants with and without Both Facilities')
+   plt.xlabel('Has Both Online Delivery and Table Booking Facilities')
+   plt.ylabel('Average Aggregate Rating')
+   plt.legend().set_visible(False)
+   plt.show()
+   ```
+
    
