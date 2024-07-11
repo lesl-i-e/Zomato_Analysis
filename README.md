@@ -120,7 +120,7 @@ Hypothesis tests were conducted to validate key assumptions:
    )
    ```
 
-   ![Boxplot](https://github.com/lesl-i-e/Zomato_Analysis/blob/main/Visualization%201.PNG)
+   ![Boxplot]([https://github.com/lesl-i-e/Zomato_Analysis/blob/main/Visualization%201.PNG](https://github.com/lesl-i-e/Zomato_Analysis/blob/main/Visualization%202.PNG))
    
 ### Results/Findings
 
