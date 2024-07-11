@@ -108,6 +108,8 @@ Hypothesis tests were conducted to validate key assumptions:
     equal_var=False
    )
    ```
+
+
    
 2. Hypothesis 2: Restaurants with Social Activities are Rated More Positively:
    ```python
